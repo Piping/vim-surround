@@ -573,7 +573,7 @@ nnoremap <silent> <Plug>SurroundRepeat .
 nnoremap <silent> <Plug>Dsurround  :<C-U>call <SID>dosurround(<SID>inputtarget())<CR>
 nnoremap <silent> <Plug>Csurround  :<C-U>call <SID>changesurround()<CR>
 nnoremap <silent> <Plug>CSurround  :<C-U>call <SID>changesurround(1)<CR>
-nnoremap <expr>   <Plug>Yssurround <SID>opfunc('setup').'g_'
+nnoremap <expr>   <Plug>Yssurround '^'.v:count1.<SID>opfunc('setup').'g_'
 nnoremap <expr>   <Plug>YSsurround <SID>opfunc2('setup').'_'
 nnoremap <expr>   <Plug>Ysurround  <SID>opfunc('setup')
 nnoremap <expr>   <Plug>YSurround  <SID>opfunc2('setup')
@@ -586,7 +586,7 @@ if !exists("g:surround_no_mappings") || ! g:surround_no_mappings
   nmap ds  <Plug>Dsurround
   nmap cs  <Plug>Csurround
   nmap cS  <Plug>CSurround
-  nmap ys  <Plug>Ysurround
+  nmap ss  <Plug>Ysurround
   nmap yS  <Plug>YSurround
   nmap yss <Plug>Yssurround
   nmap ySs <Plug>YSsurround
